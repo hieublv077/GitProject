@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: Bảng trong CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f7f9fa;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse; /* Gộp đường viền đơn */
+            margin-top: 15px;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc; /* Đường viền liền */
+        }
+
+        th {
+            height: 50px;
+            background-color: #333; /* Nền tối cho tiêu đề */
+            color: white; /* Chữ trắng */
+            text-align: left; /* Căn lề trái */
+            padding: 12px 15px;
+        }
+
+        td {
+            padding: 15px; /* Khoảng cách đệm */
+            background-color: #ffffff;
+            color: #333;
+            vertical-align: middle; /* Căn giữa theo chiều dọc */
+        }
+
+        tr:nth-child(even) td {
+            background-color: #f2f2f2; /* Màu xen kẽ cho các hàng dữ liệu */
+        }
+
+        tr:hover td {
+            background-color: #e8f4fd; /* Hiệu ứng khi rê chuột */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Danh Sách Học Viên</h2>
+
+    <table>
+        <tr>
+            <th>Họ tên</th>
+            <th>Tuổi</th>
+            <th>Lớp</th>
+        </tr>
+        <tr>
+            <td>Nguyễn Văn A</td>
+            <td>20</td>
+            <td>Web</td>
+        </tr>
+        <tr>
+            <td>Trần Thị B</td>
+            <td>21</td>
+            <td>Web</td>
+        </tr>
+        <tr>
+            <td>Lê Văn C</td>
+            <td>19</td>
+            <td>Java</td>
+        </tr>
+    </table>
+
+</body>
+</html>
