@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang web với Màu nền và Ảnh nền</title>
+    <title>Bài tập Box Model 1</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Chào mừng đến với trang web của tôi</h1>
+    <h1>So sánh Box-Sizing trong CSS Box Model</h1>
 
-    <p class="intro-text">
-        Đây là trang web giới thiệu nơi bạn có thể khám phá những kiến thức nền tảng về thiết kế giao diện với CSS.
-    </p>
+    <!-- Thẻ 1 -->
+    <div class="card">
+        <h3>Thẻ 1: content-box</h3>
+        <p>Tổng width = 280 + 40 (padding) + 10 (border) = 330px.</p>
+    </div>
 
-    <!-- Khối div chứa nội dung quan trọng -->
-    <div class="highlight-box">
-        <h2>Thông Báo Quan Trọng</h2>
-        <p>
-            CSS background mang đến khả năng tùy biến giao diện mạnh mẽ, kết hợp hài hòa giữa màu sắc và hình ảnh nền để tạo điểm nhấn nổi bật cho trang web.
-        </p>
+    <!-- Thẻ 2 -->
+    <div class="card">
+        <h3>Thẻ 2: border-box</h3>
+        <p>Tổng width giữ nguyên đúng 280px (đã bao gồm padding và border).</p>
+    </div>
+
+    <!-- Thẻ 3 -->
+    <div class="card">
+        <h3>Thẻ 3: border-box</h3>
+        <p>Kích thước được kiểm soát cố định, dễ dàng căn chỉnh layout.</p>
     </div>
 
 </body>

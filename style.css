@@ -1,50 +1,41 @@
-﻿/* Thiết lập màu nền (background-color) cho toàn trang web */
-body {
-    background-color: #eef2f5;
+﻿body {
     font-family: Arial, sans-serif;
-    color: #333;
+    background-color: #f7f9fa;
+    padding: 20px;
     margin: 0;
-    padding: 30px;
 }
 
 h1 {
-    text-align: center;
     color: #2c3e50;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
-.intro-text {
-    text-align: center;
-    font-size: 16px;
-    color: #555;
-    max-width: 600px;
-    margin: 0 auto 30px auto;
-}
-
-/* Khối div chứa nội dung quan trọng: thêm ảnh nền và căn giữa nội dung */
-.highlight-box {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 60px 40px;
-    border-radius: 12px;
+/* Quy tắc chung cho tất cả các thẻ .card */
+.card {
+    width: 280px;
+    height: 150px;
+    padding: 20px;
+    border: 5px solid #3498db;
+    margin: 20px;
     color: #ffffff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-
-    /* Căn giữa nội dung trong khối div */
-    text-align: center;
+    font-weight: 500;
 }
 
-.highlight-box h2 {
-    margin-top: 0;
-    font-size: 26px;
+/* Thẻ 1: content-box (Kích thước thực tế sẽ lớn hơn 280x150 do cộng dồn padding và border) */
+.card:nth-child(1) {
+    box-sizing: content-box;
+    background-color: #2ecc71;
 }
 
-.highlight-box p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 0;
+/* Thẻ 2: border-box (Kích thước bao quát trọn đúng 280x150) */
+.card:nth-child(2) {
+    box-sizing: border-box;
+    background-color: #f1c40f;
+    color: #333333;
+}
+
+/* Thẻ 3: border-box */
+.card:nth-child(3) {
+    box-sizing: border-box;
+    background-color: #e74c3c;
 }
