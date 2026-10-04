@@ -3,71 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành Danh sách trong CSS</title>
+    <title>Trang Web Cá Nhân</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>Chào mừng đến với trang web cá nhân của tôi</h1>
+    </header>
 
-    <h1>Thực Hành: Định Kiểu Danh Sách Trong CSS</h1>
+    <section class="profile">
+        <img src="avatar.jpg" alt="Ảnh đại diện" class="avatar">
+        <p>Xin chào! Tôi là <strong>Dương Quý Hiếu</strong>, một lập trình viên yêu thích công nghệ.</p>
+    </section>
 
-    <h2>2. Danh sách không thứ tự (Square)</h2>
-    <ul class="square-list">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Git</li>
-    </ul>
+    <section class="hobbies">
+        <h2>Sở thích</h2>
+        <ul>
+            <li>Đọc sách</li>
+            <li>Chơi thể thao</li>
+            <li>Lập trình</li>
+            <li>Du lịch</li>
+        </ul>
+    </section>
 
-    <h2>3. Danh sách có thứ tự (Upper Roman)</h2>
-    <ol class="roman-list">
-        <li>Học HTML</li>
-        <li>Học CSS</li>
-        <li>Học JavaScript</li>
-        <li>Học Git</li>
-    </ol>
+    <section class="goals">
+        <h2>Mục tiêu học tập</h2>
+        <p>Tôi muốn trở thành một lập trình viên chuyên nghiệp, xây dựng các sản phẩm hữu ích.</p>
+    </section>
 
-    <h2>4. Dấu đánh dấu bằng hình ảnh</h2>
-    <ul class="image-list">
-        <li>Visual Studio Code</li>
-        <li>Google Chrome</li>
-        <li>GitHub</li>
-        <li>Git</li>
-    </ul>
-
-    <h2>5. Vị trí dấu đánh dấu</h2>
-    <p><b>Outside:</b></p>
-    <ul class="pos-outside">
-        <li>Mục danh sách vị trí outside (dấu nằm ngoài khối)</li>
-        <li>HTML / CSS</li>
-    </ul>
-    <p><b>Inside:</b></p>
-    <ul class="pos-inside">
-        <li>Mục danh sách vị trí inside (dấu nằm trong khối nội dung)</li>
-        <li>JavaScript / Git</li>
-    </ul>
-
-    <h2>6. Thuộc tính rút gọn (list-style)</h2>
-    <ul class="shorthand-list">
-        <li>Thuộc tính kết hợp kiểu và vị trí</li>
-        <li>Viết ngắn gọn hơn trong CSS</li>
-    </ul>
-
-    <h2>7. Tùy chỉnh màu sắc và khoảng cách</h2>
-    <ul class="styled-colors">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-    </ul>
-
-    <h2>8. Tổng hợp: Lộ trình học lập trình Web</h2>
-    <ol class="roadmap">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Git</li>
-        <li>GitHub</li>
-    </ol>
-
+    <footer>
+        <h2>Thông tin liên hệ</h2>
+        <table border="1">
+            <tr>
+                <th>Email</th>
+                <td>hieublv077@gmail.com</td>
+            </tr>
+            <tr>
+                <th>Facebook</th>
+                <td><a href="#">facebook.com/hieublv077</a></td>
+            </tr>
+        </table>
+    </footer>
 </body>
 </html>

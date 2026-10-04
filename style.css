@@ -1,79 +1,57 @@
-﻿body {
+﻿/* Định dạng chung */
+body {
     font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f7f9fa;
+    background-color: #f5f5f5;
     color: #333;
-    line-height: 1.6;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-h2 {
-    color: #0056b3;
-    border-bottom: 2px solid #0056b3;
-    padding-bottom: 5px;
-    margin-top: 25px;
-}
-
-/* 2. Đổi kiểu dấu đánh dấu thành square */
-ul.square-list {
-    list-style-type: square;
-}
-
-/* 3. Danh sách có thứ tự số La Mã viết hoa */
-ol.roman-list {
-    list-style-type: upper-roman;
-}
-
-/* 4. Sử dụng hình ảnh làm dấu đánh dấu */
-ul.image-list {
-    list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><polygon points="0,0 24,12 0,24" fill="%2328a745"/></svg>');
-}
-
-/* 5. Vị trí dấu đánh dấu outside vs inside */
-ul.pos-outside {
-    list-style-position: outside;
-    background-color: #e9ecef;
-    padding: 15px 30px;
-}
-
-ul.pos-inside {
-    list-style-position: inside;
-    background-color: #dee2e6;
-    padding: 15px 30px;
-}
-
-/* 6. Thuộc tính rút gọn list-style */
-ul.shorthand-list {
-    list-style: circle inside;
-}
-
-/* 7. Định dạng danh sách với màu sắc, padding, margin */
-ul.styled-colors {
-    background-color: #2c3e50;
-    padding: 20px 30px;
-    border-radius: 8px;
-    list-style-type: disc;
-}
-
-ul.styled-colors li {
-    color: #ecf0f1;
-    margin-bottom: 10px;
-    font-weight: 500;
-}
-
-/* 8. Bài tập tổng hợp: Lộ trình học lập trình Web */
-ol.roadmap {
-    list-style: square inside;
-    background-color: #ffffff;
-    border: 2px solid #3498db;
-    border-radius: 8px;
+/* Định dạng tiêu đề */
+header {
+    background-color: #4CAF50;
+    color: white;
     padding: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    font-size: 24px;
 }
 
-ol.roadmap li {
-    color: #2980b9;
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 12px;
-    padding-left: 5px;
+/* Định dạng ảnh đại diện */
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #4CAF50;
+    margin: 20px;
+    object-fit: cover;
+}
+
+/* Định dạng danh sách */
+ul {
+    list-style-type: square;
+    text-align: left;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Định dạng bảng */
+table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 50%;
+}
+th, td {
+    border: 1px solid black;
+    padding: 10px;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Định dạng footer */
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #ddd;
 }
