@@ -3,39 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lịch họp công ty</title>
+    <title>Thực hành Danh sách trong CSS</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Lịch họp công ty</h1>
 
-    <table border="1" cellpadding="8" cellspacing="0">
-        <tr>
-            <th>Ngày</th>
-            <th>Giờ</th>
-            <th>Nội dung cuộc họp</th>
-        </tr>
-        <tr>
-            <td rowspan="2">Thứ Hai (05/10)</td>
-            <td>08:30 - 09:30</td>
-            <td>Họp giao ban đầu tuần phòng Kỹ thuật</td>
-        </tr>
-        <tr>
-            <td>14:00 - 15:30</td>
-            <td>Trao đổi tiến độ dự án mới với khách hàng</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Thứ Ba (06/10)</td>
-            <td>09:00 - 10:30</td>
-            <td>Đánh giá chất lượng sản phẩm (Sprint Review)</td>
-        </tr>
-        <tr>
-            <td>15:00 - 16:30</td>
-            <td>Đào tạo nội bộ về quy trình Git & GitHub</td>
-        </tr>
-        <tr>
-            <td>Thứ Sáu (09/10)</td>
-            <td colspan="2">Nghỉ lễ / Hoạt động Team Building toàn công ty cả ngày</td>
-        </tr>
-    </table>
+    <h1>Thực Hành: Định Kiểu Danh Sách Trong CSS</h1>
+
+    <h2>2. Danh sách không thứ tự (Square)</h2>
+    <ul class="square-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Git</li>
+    </ul>
+
+    <h2>3. Danh sách có thứ tự (Upper Roman)</h2>
+    <ol class="roman-list">
+        <li>Học HTML</li>
+        <li>Học CSS</li>
+        <li>Học JavaScript</li>
+        <li>Học Git</li>
+    </ol>
+
+    <h2>4. Dấu đánh dấu bằng hình ảnh</h2>
+    <ul class="image-list">
+        <li>Visual Studio Code</li>
+        <li>Google Chrome</li>
+        <li>GitHub</li>
+        <li>Git</li>
+    </ul>
+
+    <h2>5. Vị trí dấu đánh dấu</h2>
+    <p><b>Outside:</b></p>
+    <ul class="pos-outside">
+        <li>Mục danh sách vị trí outside (dấu nằm ngoài khối)</li>
+        <li>HTML / CSS</li>
+    </ul>
+    <p><b>Inside:</b></p>
+    <ul class="pos-inside">
+        <li>Mục danh sách vị trí inside (dấu nằm trong khối nội dung)</li>
+        <li>JavaScript / Git</li>
+    </ul>
+
+    <h2>6. Thuộc tính rút gọn (list-style)</h2>
+    <ul class="shorthand-list">
+        <li>Thuộc tính kết hợp kiểu và vị trí</li>
+        <li>Viết ngắn gọn hơn trong CSS</li>
+    </ul>
+
+    <h2>7. Tùy chỉnh màu sắc và khoảng cách</h2>
+    <ul class="styled-colors">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+    </ul>
+
+    <h2>8. Tổng hợp: Lộ trình học lập trình Web</h2>
+    <ol class="roadmap">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Git</li>
+        <li>GitHub</li>
+    </ol>
+
 </body>
 </html>
