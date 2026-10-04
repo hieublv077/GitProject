@@ -3,46 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Cá Nhân</title>
+    <title>Nhúng CSS vào HTML</title>
+
+    <!-- Phần 2: Internal Style (Nhúng trong thẻ <style>) -->
+    <style>
+        .internal-title {
+            color: #2980b9;
+        }
+        .internal-text {
+            color: #8e44ad;
+            font-size: 16px;
+        }
+    </style>
+
+    <!-- Phần 3: Liên kết External Style -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <h1>Chào mừng đến với trang web cá nhân của tôi</h1>
-    </header>
+<body style="font-family: Arial, sans-serif; padding: 20px; line-height: 1.6;">
 
-    <section class="profile">
-        <img src="avatar.jpg" alt="Ảnh đại diện" class="avatar">
-        <p>Xin chào! Tôi là <strong>Dương Quý Hiếu</strong>, một lập trình viên yêu thích công nghệ.</p>
-    </section>
+    <h1>Bài tập: 3 Cách nhúng CSS vào trang HTML</h1>
 
-    <section class="hobbies">
-        <h2>Sở thích</h2>
-        <ul>
-            <li>Đọc sách</li>
-            <li>Chơi thể thao</li>
-            <li>Lập trình</li>
-            <li>Du lịch</li>
-        </ul>
-    </section>
+    <!-- PHẦN 1: INLINE CSS -->
+    <div>
+        <h2 style="color: #c0392b;">1. Inline Style (Tiêu đề màu đỏ)</h2>
+        <p style="color: #d35400; font-size: 16px;">Đoạn văn này được định dạng bằng Inline CSS sử dụng thuộc tính style trực tiếp trên thẻ.</p>
+    </div>
 
-    <section class="goals">
-        <h2>Mục tiêu học tập</h2>
-        <p>Tôi muốn trở thành một lập trình viên chuyên nghiệp, xây dựng các sản phẩm hữu ích.</p>
-    </section>
+    <!-- PHẦN 2: INTERNAL CSS -->
+    <div>
+        <h2 class="internal-title">2. Internal Style (Tiêu đề màu xanh dương)</h2>
+        <p class="internal-text">Đoạn văn này được định dạng bằng Internal CSS nằm trong thẻ &lt;style&gt; ở phần &lt;head&gt;.</p>
+    </div>
 
-    <footer>
-        <h2>Thông tin liên hệ</h2>
-        <table border="1">
-            <tr>
-                <th>Email</th>
-                <td>hieublv077@gmail.com</td>
-            </tr>
-            <tr>
-                <th>Facebook</th>
-                <td><a href="#">facebook.com/hieublv077</a></td>
-            </tr>
-        </table>
-    </footer>
+    <!-- PHẦN 3: EXTERNAL CSS -->
+    <div>
+        <h2 class="external-title">3. External Style (Tiêu đề màu xanh lá cây)</h2>
+        <p class="external-text">Đoạn văn này được định dạng bằng External CSS từ tệp style.css riêng biệt liên kết qua thẻ &lt;link&gt;.</p>
+    </div>
+
 </body>
 </html>
