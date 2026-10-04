@@ -1,68 +1,50 @@
-﻿/* Element selector: Đổi màu nền của trang */
+﻿/* Thiết lập màu nền (background-color) cho toàn trang web */
 body {
-    background-color: #f0f4f8;
+    background-color: #eef2f5;
     font-family: Arial, sans-serif;
-    padding: 30px;
     color: #333;
+    margin: 0;
+    padding: 30px;
 }
 
-/* Element selector: Căn giữa tiêu đề h1 */
 h1 {
     text-align: center;
     color: #2c3e50;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-/* ID selector: Đoạn văn mô tả bản thân */
-#bio {
+.intro-text {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+/* Khối div chứa nội dung quan trọng: thêm ảnh nền và căn giữa nội dung */
+.highlight-box {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    border-radius: 12px;
+    color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+    /* Căn giữa nội dung trong khối div */
+    text-align: center;
+}
+
+.highlight-box h2 {
+    margin-top: 0;
+    font-size: 26px;
+}
+
+.highlight-box p {
     font-size: 16px;
     line-height: 1.6;
-    max-width: 600px;
-    margin: 0 auto 20px auto;
-    text-align: center;
-}
-
-/* Class selector: Danh sách sở thích */
-.hobby-list {
-    max-width: 400px;
-    margin: 0 auto 30px auto;
-    padding-left: 20px;
-}
-
-/* Pseudo-class: Đổi màu sắc khác nhau cho từng mục trong danh sách */
-.hobby-list li:nth-child(1) {
-    color: #e74c3c; /* Đỏ */
-    font-weight: bold;
-}
-
-.hobby-list li:nth-child(2) {
-    color: #27ae60; /* Xanh lá */
-    font-weight: bold;
-}
-
-.hobby-list li:nth-child(3) {
-    color: #2980b9; /* Xanh dương */
-    font-weight: bold;
-}
-
-/* Định dạng container căn giữa nút bấm */
-.btn-wrapper {
-    text-align: center;
-}
-
-/* Class selector: Định dạng nút bấm */
-.my-button {
-    background-color: #3498db;
-    color: white;
-    padding: 12px 24px;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Pseudo-class :hover effect cho nút bấm */
-.my-button:hover {
-    background-color: #1abc9c;
+    margin-bottom: 0;
 }
