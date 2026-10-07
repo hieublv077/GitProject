@@ -1,171 +1,143 @@
 ﻿* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 20px 0;
-    background-color: #e9ecef;
+    background-color: #f1f3f6;
+    color: #333333;
+    line-height: 1.6;
 }
 
-/* Vùng bao quanh toàn bộ trang web, căn giữa */
-#main {
-    width: 1000px;
-    margin: 0 auto;
+.wrapper {
+    max-width: 1100px;
+    margin: 25px auto;
     background-color: #ffffff;
-    border: 1px solid #cccccc;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
-/* 1. Phần Head: Banner, Logo */
-#head {
-    height: 120px;
+header {
     background-color: #2c3e50;
     color: #ffffff;
-    display: flex;
-    align-items: center;
-    padding: 0 25px;
-    border-bottom: 3px solid #3498db;
+    padding: 30px;
+    text-align: center;
 }
 
-#head h1 {
-    margin: 0;
-    font-size: 26px;
-    letter-spacing: 1px;
+header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
 }
 
-/* 2. Phần Head-Link: Thanh menu điều hướng đầu trang */
-#head-link {
-    height: 45px;
+header p {
+    font-size: 15px;
+    color: #bdc3c7;
+}
+
+nav {
     background-color: #34495e;
-    line-height: 45px;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
-#head-link ul {
+nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
 }
 
-#head-link ul li {
-    margin-right: 25px;
-}
-
-#head-link ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    transition: color 0.2s;
-}
-
-#head-link ul li a:hover {
-    color: #3498db;
-}
-
-/* Khối bao bọc 3 cột (Clearfix) */
-.body-content::after {
-    content: "";
+nav ul li a {
     display: block;
-    clear: both;
-}
-
-/* 3. Phần Left: Cột trái (Links, menu phụ) */
-#left {
-    width: 200px;
-    min-height: 450px;
-    float: left;
-    background-color: #f8f9fa;
-    border-right: 1px solid #e0e0e0;
-    padding: 15px;
-}
-
-#left h3 {
-    margin-top: 0;
-    font-size: 16px;
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 5px;
-}
-
-#left ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#left ul li {
-    padding: 8px 0;
-    border-bottom: 1px dashed #dddddd;
-}
-
-#left ul li a {
-    color: #333333;
+    padding: 14px 20px;
+    color: #ffffff;
     text-decoration: none;
-    font-size: 13px;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background-color 0.2s ease;
 }
 
-#left ul li a:hover {
-    color: #3498db;
+nav ul li a:hover {
+    background-color: #1abc9c;
 }
 
-/* 4. Phần Content: Cột nội dung chính ở giữa */
-#content {
-    width: 580px;
-    min-height: 450px;
-    float: left;
-    background-color: #ffffff;
+.main-container {
+    display: flex;
+    padding: 25px;
+    gap: 25px;
+}
+
+section {
+    flex: 3;
+}
+
+article {
+    background-color: #fafbfc;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+article:last-child {
+    margin-bottom: 0;
+}
+
+article h2 {
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 6px;
+}
+
+article p {
+    color: #555555;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+aside {
+    flex: 1;
+    background-color: #fdfefe;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
     padding: 20px;
 }
 
-#content h2 {
-    margin-top: 0;
+aside h3 {
     color: #2c3e50;
-    font-size: 20px;
-}
-
-#content p {
-    color: #555555;
-    line-height: 1.6;
-    font-size: 14px;
-    margin-bottom: 15px;
-}
-
-/* 5. Phần Right: Cột thông tin phụ bên phải */
-#right {
-    width: 218px;
-    min-height: 450px;
-    float: left;
-    background-color: #f8f9fa;
-    border-left: 1px solid #e0e0e0;
-    padding: 15px;
-}
-
-#right h3 {
-    margin-top: 0;
-    font-size: 16px;
-    color: #2c3e50;
+    font-size: 17px;
+    margin-bottom: 12px;
     border-bottom: 2px solid #e67e22;
     padding-bottom: 5px;
 }
 
-#right p {
-    font-size: 13px;
-    color: #666666;
-    line-height: 1.5;
+aside ul {
+    list-style: none;
+    margin-bottom: 20px;
 }
 
-/* 6. Phần Footer: Chân trang (clear float) */
-#footer {
-    clear: both;
-    height: 55px;
+aside ul li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #e1e8ed;
+}
+
+aside ul li a {
+    color: #34495e;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+aside ul li a:hover {
+    color: #3498db;
+}
+
+footer {
     background-color: #2c3e50;
-    color: #bdc3c7;
+    color: #ecf0f1;
     text-align: center;
-    line-height: 55px;
+    padding: 18px;
     font-size: 13px;
-    border-top: 2px solid #34495e;
+    border-top: 3px solid #1abc9c;
 }
