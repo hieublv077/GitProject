@@ -3,47 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ Giản Lược</title>
+    <title>Phim Hoạt Hình Trực Tuyến - KidCartoon HD</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="main-header">
-        <h1>Tiêu đề Trang Web</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Giới thiệu</a></li>
-                <li><a href="#">Dịch vụ</a></li>
-                <li><a href="#">Liên hệ</a></li>
-            </ul>
-        </nav>
+
+    <!-- Header cố định -->
+    <header class="header">
+        <a href="#" class="logo">🎬 Kid<span>Cartoon</span></a>
+        
+        <div class="head-link">
+            <a href="#">Trang chủ</a>
+            <a href="#">Mới cập nhật</a>
+            <a href="#">Xem nhiều nhất</a>
+            <a href="#">Thuyết minh</a>
+            <div class="search-box">
+                <input type="text" placeholder="Tìm kiếm phim hoạt hình...">
+            </div>
+        </div>
     </header>
 
-    <div class="page-container">
-        <aside class="sidebar left-sidebar">
-            <h3>Sidebar Trái</h3>
-            <ul>
-                <li>Mục 1: Bảng điều khiển</li>
-                <li>Mục 2: Hồ sơ cá nhân</li>
-                <li>Mục 3: Cài đặt hệ thống</li>
-                <li>Mục 4: Trợ giúp & Hỗ trợ</li>
+    <!-- Bố cục Content -->
+    <div class="content">
+        <!-- Left Content: Danh sách video -->
+        <aside class="left-content">
+            <h3>Danh Sách Tuyển Chọn</h3>
+            <ul class="video-list">
+                <li>
+                    <a href="#" class="video-item active">
+                        <img class="video-thumb" src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=200&q=80" alt="Big Buck Bunny">
+                        <div class="video-info">
+                            <h4>Big Buck Bunny (Bản Thuyết Minh)</h4>
+                            <span>FullHD 1080p • 1.2M lượt xem</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video-item">
+                        <img class="video-thumb" src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=200&q=80" alt="Tom and Jerry">
+                        <div class="video-info">
+                            <h4>Tom và Jerry - Tập phim cổ tích</h4>
+                            <span>HD 720p • 3.5M lượt xem</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video-item">
+                        <img class="video-thumb" src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=200&q=80" alt="Doraemon">
+                        <div class="video-info">
+                            <h4>Doraemon: Chú Mèo Máy Đến Từ Tương Lai</h4>
+                            <span>FullHD 1080p • 5.1M lượt xem</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="video-item">
+                        <img class="video-thumb" src="https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=200&q=80" alt="Oggy">
+                        <div class="video-info">
+                            <h4>Oggy và Những Chú Gián Tinh Nghịch</h4>
+                            <span>HD 720p • 890K lượt xem</span>
+                        </div>
+                    </a>
+                </li>
             </ul>
         </aside>
 
-        <main class="main-content">
-            <h2>Nội dung chính của trang</h2>
-            <p>Đây là khu vực chứa nội dung quan trọng nhất của trang web. Chúng ta sẽ đặt các bài viết, sản phẩm, hoặc thông tin chi tiết tại đây.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-        </main>
+        <!-- Right Content: Trình phát Video (kết hợp cả iframe Youtube và video HTML5) -->
+        <main class="right-content">
+            <div class="player-wrapper">
+                <!-- Nhúng video YouTube qua iframe chất lượng cao -->
+                <iframe 
+                    src="https://www.youtube.com/embed/aqz-KE-bpKQ" 
+                    title="Big Buck Bunny Cartoon Animation" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
 
-        <aside class="sidebar right-sidebar">
-            <h3>Sidebar Phải</h3>
-            <p>Đây là một sidebar khác, có thể chứa quảng cáo, bài viết liên quan hoặc các widget khác.</p>
-        </aside>
+            <div class="video-meta">
+                <h2>Big Buck Bunny - Phim Hoạt Hình Giáo Dục Vui Nhộn</h2>
+                <p>Nội dung phim hoạt hình trong sáng, an toàn cho trẻ em, chất lượng hình ảnh sắc nét và hoàn toàn không chèn quảng cáo gây phiền toái.</p>
+            </div>
+        </main>
     </div>
+
+    <!-- Footer thông tin bản quyền -->
+    <footer class="footer">
+        <p>&copy; 2026 KidCartoon TV - Kênh hoạt hình an toàn, giáo dục và thuyết minh tiếng Việt chuẩn cho thiếu nhi.</p>
+    </footer>
+
 </body>
 </html>

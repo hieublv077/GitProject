@@ -1,119 +1,241 @@
-﻿/* Thiết lập cơ bản */
-* {
+﻿* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding-top: 70px; /* Bù đắp chiều cao của header cố định */
-    min-height: 1500px; /* Đảm bảo trang có đủ chiều cao để cuộn kiểm tra */
+    background-color: #f7f9fc;
+    color: #333333;
+    padding-top: 70px; /* Bù đắp cho Header cố định */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Header cố định */
-.main-header {
-    position: fixed; /* Cố định header ở đầu trang */
+/* 1. Header cố định (Fixed Header) */
+.header {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333333;
-    color: white;
-    padding: 15px 25px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    height: 70px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000; /* Đảm bảo luôn nổi lên trên nội dung cuộn */
+    padding: 0 30px;
+    z-index: 1000;
 }
 
-.main-header h1 {
-    margin: 0;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 22px;
-}
-
-.main-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.main-header nav ul li {
-    margin-left: 20px;
-}
-
-.main-header nav ul li a {
-    color: white;
-    text-decoration: none;
     font-weight: bold;
-    transition: color 0.2s;
+    color: #ff4757;
+    text-decoration: none;
 }
 
-.main-header nav ul li a:hover {
-    color: #3498db;
+.logo span {
+    color: #2ed573;
 }
 
-/* Container cho bố cục chính (sidebar + nội dung) sử dụng Flexbox */
-.page-container {
+/* Head-link & Thanh tìm kiếm */
+.head-link {
     display: flex;
-    justify-content: space-between;
-    margin: 20px;
+    align-items: center;
     gap: 20px;
 }
 
-/* Định dạng các sidebar */
-.sidebar {
+.head-link a {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: #4b6584;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+/* Khi rê chuột vào liên kết: Bôi đậm và đổi màu */
+.head-link a:hover {
+    font-weight: bold;
+    color: #ff4757;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #f1f2f6;
+    border-radius: 20px;
+    padding: 6px 14px;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 14px;
+    width: 180px;
+}
+
+/* 2. Content: Phân chia Left Content & Right Content */
+.content {
+    display: flex;
+    flex: 1;
+    max-width: 1300px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 20px;
+    gap: 25px;
+}
+
+/* Left Content: Danh sách video */
+.left-content {
+    width: 320px;
+    flex-shrink: 0;
     background-color: #ffffff;
-    padding: 15px;
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0; /* Không bị co lại khi màn hình hẹp */
+    border-radius: 10px;
+    padding: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
-.left-sidebar {
-    width: 220px;
-}
-
-.right-sidebar {
-    width: 220px;
-}
-
-.sidebar h3 {
-    margin-top: 0;
-    color: #2c3e50;
-    border-bottom: 2px solid #ecf0f1;
+.left-content h3 {
+    margin-bottom: 15px;
+    font-size: 17px;
+    color: #2f3542;
+    border-bottom: 2px solid #f1f2f6;
     padding-bottom: 8px;
 }
 
-.sidebar ul {
+.video-list {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.sidebar ul li {
-    padding: 8px 0;
-    border-bottom: 1px solid #f2f2f2;
-    color: #555555;
+.video-item {
+    display: flex;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #2f3542;
+    transition: background-color 0.2s;
 }
 
-/* Khu vực nội dung chính */
-.main-content {
-    background-color: #ffffff;
-    padding: 25px;
+.video-item:hover, .video-item.active {
+    background-color: #f8f9fa;
+}
+
+.video-item:hover .video-info h4 {
+    color: #ff4757;
+    font-weight: bold;
+}
+
+.video-thumb {
+    width: 90px;
+    height: 55px;
     border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    flex-grow: 1; /* Tự động co giãn chiếm trọn khoảng trống ở giữa */
+    object-fit: cover;
+    background-color: #ddd;
 }
 
-.main-content h2 {
-    margin-top: 0;
-    color: #2c3e50;
+.video-info h4 {
+    font-size: 13px;
+    margin-bottom: 4px;
+    line-height: 1.4;
+    font-weight: 500;
 }
 
-.main-content p {
-    color: #444444;
-    line-height: 1.7;
-    margin-bottom: 15px;
+.video-info span {
+    font-size: 11px;
+    color: #747d8c;
+}
+
+/* Right Content: Khu vực trình chiếu video */
+.right-content {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.player-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Tỉ lệ 16:9 chuẩn HD */
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #000;
+    margin-bottom: 18px;
+}
+
+.player-wrapper iframe, .player-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-meta h2 {
+    font-size: 20px;
+    color: #2f3542;
+    margin-bottom: 8px;
+}
+
+.video-meta p {
+    color: #747d8c;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* 3. Footer */
+.footer {
+    background-color: #2f3542;
+    color: #ffffff;
+    text-align: center;
+    padding: 16px;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+/* 4. Responsive Design (PC, Tablet, Mobile) */
+@media (max-width: 992px) {
+    .content {
+        flex-direction: column-reverse; /* Đưa khung video lên trên tablet/mobile */
+    }
+
+    .left-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 12px 15px;
+        gap: 10px;
+    }
+
+    body {
+        padding-top: 130px;
+    }
+
+    .head-link {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .search-box input {
+        width: 130px;
+    }
 }
