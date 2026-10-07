@@ -1,16 +1,39 @@
-﻿body {
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
-    padding: 30px;
+    margin: 0;
+    padding: 20px;
     background-color: #f7f9fa;
 }
 
-.overflow-box {
-    width: 300px;
-    height: 100px;
-    background-color: lightgray;
-    padding: 10px;
-    overflow: auto;
-    border: 1px solid #999;
-    border-radius: 4px;
-    line-height: 1.5;
+.container {
+    width: 100%;
+}
+
+.left-column {
+    width: 60%;
+    float: left;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 6px;
+    min-height: 200px;
+}
+
+.right-column {
+    width: 38%;
+    float: right;
+    background-color: lightgreen;
+    padding: 20px;
+    border-radius: 6px;
+    min-height: 200px;
+}
+
+/* Xử lý float (Clearfix) */
+.container::after {
+    content: "";
+    display: block;
+    clear: both;
 }
