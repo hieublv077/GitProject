@@ -3,55 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành: CSS flex-basis Property</title>
+    <title>Thực hành: CSS flex-flow Property</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Thực hành: Thuộc tính flex-basis trong CSS Flexbox</h1>
-    <p class="subtitle">Khảo sát kích thước cơ sở ban đầu của Flex Item trên trục chính (Main Axis).</p>
-
     <!-- Ví dụ 1 -->
-    <div class="demo-card">
-        <h3>Ví dụ 1: Sử dụng flex-basis với đơn vị px (Row)</h3>
-        <p>Main Axis là chiều ngang. Item 1 (200px), Item 2 (100px), Item 3 (150px).</p>
-        <div class="ex1-container">
-            <div class="item ex1-item1">Item 1 (200px)</div>
-            <div class="item ex1-item2">Item 2 (100px)</div>
-            <div class="item ex1-item3">Item 3 (150px)</div>
-        </div>
+    <h2>1. flex-flow: row nowrap (Mặc định)</h2>
+    <p class="desc">Các item xếp theo hàng ngang từ trái qua phải (1 &rarr; 2 &rarr; 3) và không xuống dòng.</p>
+    <div class="container-1">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
     </div>
 
     <!-- Ví dụ 2 -->
-    <div class="demo-card">
-        <h3>Ví dụ 2: flex-basis thay đổi theo flex-direction: column</h3>
-        <p>Main Axis chuyển thành chiều dọc, <code>flex-basis: 100px;</code> sẽ quy định chiều cao của mỗi Item.</p>
-        <div class="ex2-container">
-            <div class="item">Item 1 (Cao 100px)</div>
-            <div class="item">Item 2 (Cao 100px)</div>
-            <div class="item">Item 3 (Cao 100px)</div>
-        </div>
-    </div>
-
-    <!-- Ví dụ 3 -->
-    <div class="demo-card">
-        <h3>Ví dụ 3: flex-basis với đơn vị phần trăm (%)</h3>
-        <p><code>flex-basis: 50%;</code> chia đều không gian Container thành 2 cột tương đương nhau.</p>
-        <div class="ex3-container">
-            <div class="item">Item 1 (50%)</div>
-            <div class="item">Item 2 (50%)</div>
-        </div>
-    </div>
-
-    <!-- Ví dụ 4 -->
-    <div class="demo-card">
-        <h3>Ví dụ 4: Kết hợp flex-basis với flex-grow</h3>
-        <p>Ban đầu mỗi Item có cơ sở 100px. Khoảng trống dư thừa được chia theo tỷ lệ <code>flex-grow</code> 1 : 2 : 1.</p>
-        <div class="ex4-container">
-            <div class="item ex4-item1">Item 1 (basis: 100px, grow: 1)</div>
-            <div class="item ex4-item2">Item 2 (basis: 100px, grow: 2)</div>
-            <div class="item ex4-item3">Item 3 (basis: 100px, grow: 1)</div>
-        </div>
+    <h2>2. flex-flow: row-reverse nowrap</h2>
+    <p class="desc">Các item xếp theo hàng ngang nhưng đổi hướng từ phải qua trái (3 &larr; 2 &larr; 1) và không xuống dòng.</p>
+    <div class="container-2">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
     </div>
 
 </body>
