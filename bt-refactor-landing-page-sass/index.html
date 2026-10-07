@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Tái Cấu Trúc Bằng SASS</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <!-- 1. Navigation & Header -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="brand-logo">LuminaStore</a>
+            <ul class="nav-menu">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#products">Sản phẩm nổi bật</a></li>
+                <li><a href="#stats">Số liệu</a></li>
+                <li><a href="#footer">Liên hệ</a></li>
+            </ul>
+            <a href="#products" class="btn-nav">Khám phá</a>
+        </div>
+    </nav>
+
+    <header class="hero-header">
+        <div class="container">
+            <h1>Kiến Tạo Phong Cách Sống Hiện Đại</h1>
+            <p>Trang bị các thiết bị công nghệ và nội thất số thông minh nhất cho không gian làm việc của bạn.</p>
+            <a href="#products" class="btn-cta">Xem Sản Phẩm Ngay</a>
+        </div>
+    </header>
+
+    <!-- 2. Sản Phẩm Nổi Bật -->
+    <section class="featured-products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sản Phẩm Nổi Bật</h2>
+                <p>Những sản phẩm công nghệ được ưa chuộng nhất trong tuần</p>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80" alt="Tai nghe">
+                    <div class="card-body">
+                        <h3>Tai Nghe Chống Ồn</h3>
+                        <p>Âm thanh Hi-Res chân thực, pin 40 tiếng liên tục.</p>
+                        <div class="price">4.290.000₫</div>
+                        <a href="#" class="btn-buy">Thêm Vào Giỏ</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80" alt="Đồng hồ">
+                    <div class="card-body">
+                        <h3>Đồng Hồ SmartWatch</h3>
+                        <p>Theo dõi nhịp tim và chế độ tập luyện thông minh.</p>
+                        <div class="price">6.890.000₫</div>
+                        <a href="#" class="btn-buy">Thêm Vào Giỏ</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1583394838336-acd977736f90?auto=format&fit=crop&w=600&q=80" alt="Bàn phím cơ">
+                    <div class="card-body">
+                        <h3>Bàn Phím Cơ Không Dây</h3>
+                        <p>Switch bấm êm ái, tương thích hoàn hảo máy tính.</p>
+                        <div class="price">2.150.000₫</div>
+                        <a href="#" class="btn-buy">Thêm Vào Giỏ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Số Liệu Thống Kê -->
+    <section class="statistics-section" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">15K+</div>
+                    <div class="stat-label">Khách hàng tin dùng</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.8%</div>
+                    <div class="stat-label">Hài lòng dịch vụ</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">48H</div>
+                    <div class="stat-label">Giao hàng toàn quốc</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Hỗ trợ kỹ thuật</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Footer -->
+    <footer class="site-footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>Về LuminaStore</h4>
+                    <p>Nhà phân phối chính hãng các sản phẩm công nghệ cao cấp.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên Kết Nhanh</h4>
+                    <ul>
+                        <li><a href="#">Trang chủ</a></li>
+                        <li><a href="#products">Sản phẩm</a></li>
+                        <li><a href="#stats">Thống kê</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Chính Sách</h4>
+                    <ul>
+                        <li><a href="#">Chính sách đổi trả</a></li>
+                        <li><a href="#">Bảo mật thông tin</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Liên Hệ</h4>
+                    <ul>
+                        <li>Hotline: 1900 6868</li>
+                        <li>Email: contact@luminastore.vn</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 LuminaStore. All rights reserved. Tái cấu trúc hoàn chỉnh bằng SASS/SCSS.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

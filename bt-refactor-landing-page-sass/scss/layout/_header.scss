@@ -1,0 +1,101 @@
+﻿@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
+.navbar {
+  background-color: vars.$bg-white;
+  box-shadow: vars.$shadow-sm;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 16px 0;
+
+  .nav-container {
+    @include mix.flex-between;
+  }
+
+  .brand-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: vars.$primary-color;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+  }
+
+  .nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+
+    @include mix.mobile {
+      display: none;
+    }
+
+    li a {
+      text-decoration: none;
+      color: vars.$text-main;
+      font-weight: 500;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: vars.$primary-color;
+      }
+    }
+  }
+
+  .btn-nav {
+    background-color: vars.$primary-color;
+    color: vars.$bg-white;
+    padding: 8px 20px;
+    border-radius: vars.$radius-full;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: vars.$primary-dark;
+    }
+  }
+}
+
+.hero-header {
+  background: linear-gradient(135deg, vars.$secondary-color 0%, #1e293b 100%);
+  color: vars.$bg-white;
+  padding: 100px 0;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+    line-height: 1.2;
+
+    @include mix.mobile {
+      font-size: 2.2rem;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    max-width: 650px;
+    margin: 0 auto 30px;
+  }
+
+  .btn-cta {
+    display: inline-block;
+    background-color: vars.$primary-color;
+    color: vars.$bg-white;
+    padding: 14px 32px;
+    border-radius: vars.$radius-md;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    box-shadow: vars.$shadow-md;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: vars.$primary-dark;
+      transform: translateY(-2px);
+    }
+  }
+}

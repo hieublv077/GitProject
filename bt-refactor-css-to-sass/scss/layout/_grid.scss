@@ -1,0 +1,31 @@
+﻿@use "../abstracts/mixins" as mix;
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col {
+  flex: 1 0 100%;
+  padding: 15px;
+
+  @include mix.respond-to("sm") {
+    flex: 1 0 50%;
+  }
+
+  @include mix.respond-to("md") {
+    flex: 1 0 33.333%;
+  }
+
+  @include mix.respond-to("lg") {
+    flex: 1 0 25%;
+  }
+}

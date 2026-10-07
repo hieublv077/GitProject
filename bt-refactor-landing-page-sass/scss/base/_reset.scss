@@ -1,0 +1,41 @@
+﻿@use "../abstracts/variables" as vars;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: vars.$font-base;
+  color: vars.$text-main;
+  background-color: vars.$bg-light;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+
+  h2 {
+    font-size: 2.2rem;
+    color: vars.$secondary-color;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: vars.$text-light;
+    font-size: 1.1rem;
+  }
+}

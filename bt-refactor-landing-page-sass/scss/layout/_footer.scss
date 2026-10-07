@@ -1,0 +1,53 @@
+﻿@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
+.site-footer {
+  background-color: #0b1120;
+  color: #94a3b8;
+  padding: 60px 0 30px;
+  font-size: 0.95rem;
+
+  .footer-grid {
+    @include mix.grid-layout(4, 30px);
+    margin-bottom: 40px;
+
+    @include mix.mobile {
+      grid-template-columns: 1fr;
+      row-gap: 30px;
+    }
+  }
+
+  .footer-col {
+    h4 {
+      color: vars.$bg-white;
+      font-size: 1.15rem;
+      margin-bottom: 18px;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        margin-bottom: 10px;
+
+        a {
+          color: #94a3b8;
+          text-decoration: none;
+          transition: color 0.2s ease;
+
+          &:hover {
+            color: vars.$bg-white;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #1e293b;
+    padding-top: 25px;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #64748b;
+  }
+}
