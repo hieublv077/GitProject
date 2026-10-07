@@ -3,94 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phim Hoạt Hình Trực Tuyến - KidCartoon HD</title>
+    <title>Thực hành: Tạo Bố Cục Cơ Bản</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header cố định -->
-    <header class="header">
-        <a href="#" class="logo">🎬 Kid<span>Cartoon</span></a>
-        
-        <div class="head-link">
-            <a href="#">Trang chủ</a>
-            <a href="#">Mới cập nhật</a>
-            <a href="#">Xem nhiều nhất</a>
-            <a href="#">Thuyết minh</a>
-            <div class="search-box">
-                <input type="text" placeholder="Tìm kiếm phim hoạt hình...">
+    <div id="main">
+        <!-- 1. Head -->
+        <div id="head">
+            <h1>HỆ THỐNG ĐÀO TẠO LẬP TRÌNH - CODEGYM</h1>
+        </div>
+
+        <!-- 2. Head-link -->
+        <div id="head-link">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Học viên</a></li>
+                <li><a href="#">Khóa học</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </div>
+
+        <!-- Khối bao quanh 3 cột float -->
+        <div class="body-content">
+            <!-- 3. Left -->
+            <div id="left">
+                <h3>Liên Kết Trái</h3>
+                <ul>
+                    <li><a href="#">HTML cơ bản</a></li>
+                    <li><a href="#">CSS Box Model</a></li>
+                    <li><a href="#">Định vị Position</a></li>
+                    <li><a href="#">Layout với Float</a></li>
+                    <li><a href="#">Flexbox hiện đại</a></li>
+                </ul>
+            </div>
+
+            <!-- 4. Content -->
+            <div id="content">
+                <h2>Nội Dung Chính: Kiến Trúc Phân Vùng Trang Web</h2>
+                <p>Bố cục trang web cơ bản được xây dựng dựa trên sự phân tách rõ ràng giữa các thẻ khối div kết hợp với kỹ thuật float và clear trong CSS.</p>
+                <p>Phần content này là khu vực trung tâm, nơi người dùng tiếp nhận tin tức, bài viết chuyên sâu và các thông điệp giá trị nhất của trang web.</p>
+                <p>Nhờ áp dụng nguyên lý Box Model và căn giữa khung chứa #main, trang web hiển thị hài hòa, cân đối và khoa học trên màn hình máy tính.</p>
+            </div>
+
+            <!-- 5. Right -->
+            <div id="right">
+                <h3>Thông Tin Phụ</h3>
+                <p><b>Lịch biểu:</b> Thứ 2 - Thứ 6</p>
+                <p><b>Giờ học:</b> 08:30 - 17:30</p>
+                <p><b>Thông báo:</b> Chuẩn bị nộp bài tập module CSS và Git trước hạn chót.</p>
             </div>
         </div>
-    </header>
 
-    <!-- Bố cục Content -->
-    <div class="content">
-        <!-- Left Content: Danh sách video -->
-        <aside class="left-content">
-            <h3>Danh Sách Tuyển Chọn</h3>
-            <ul class="video-list">
-                <li>
-                    <a href="#" class="video-item active">
-                        <img class="video-thumb" src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=200&q=80" alt="Big Buck Bunny">
-                        <div class="video-info">
-                            <h4>Big Buck Bunny (Bản Thuyết Minh)</h4>
-                            <span>FullHD 1080p • 1.2M lượt xem</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="video-item">
-                        <img class="video-thumb" src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=200&q=80" alt="Tom and Jerry">
-                        <div class="video-info">
-                            <h4>Tom và Jerry - Tập phim cổ tích</h4>
-                            <span>HD 720p • 3.5M lượt xem</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="video-item">
-                        <img class="video-thumb" src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?auto=format&fit=crop&w=200&q=80" alt="Doraemon">
-                        <div class="video-info">
-                            <h4>Doraemon: Chú Mèo Máy Đến Từ Tương Lai</h4>
-                            <span>FullHD 1080p • 5.1M lượt xem</span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="video-item">
-                        <img class="video-thumb" src="https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=200&q=80" alt="Oggy">
-                        <div class="video-info">
-                            <h4>Oggy và Những Chú Gián Tinh Nghịch</h4>
-                            <span>HD 720p • 890K lượt xem</span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </aside>
-
-        <!-- Right Content: Trình phát Video (kết hợp cả iframe Youtube và video HTML5) -->
-        <main class="right-content">
-            <div class="player-wrapper">
-                <!-- Nhúng video YouTube qua iframe chất lượng cao -->
-                <iframe 
-                    src="https://www.youtube.com/embed/aqz-KE-bpKQ" 
-                    title="Big Buck Bunny Cartoon Animation" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-
-            <div class="video-meta">
-                <h2>Big Buck Bunny - Phim Hoạt Hình Giáo Dục Vui Nhộn</h2>
-                <p>Nội dung phim hoạt hình trong sáng, an toàn cho trẻ em, chất lượng hình ảnh sắc nét và hoàn toàn không chèn quảng cáo gây phiền toái.</p>
-            </div>
-        </main>
+        <!-- 6. Footer -->
+        <div id="footer">
+            &copy; 2026 CodeGym. All Rights Reserved. Hệ thống đào tạo lập trình hiện đại.
+        </div>
     </div>
-
-    <!-- Footer thông tin bản quyền -->
-    <footer class="footer">
-        <p>&copy; 2026 KidCartoon TV - Kênh hoạt hình an toàn, giáo dục và thuyết minh tiếng Việt chuẩn cho thiếu nhi.</p>
-    </footer>
 
 </body>
 </html>
