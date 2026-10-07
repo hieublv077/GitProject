@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: CSS grid-column-start</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            padding: 30px;
+            background-color: #f7f9fa;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-top: 25px;
+            margin-bottom: 8px;
+        }
+
+        p.desc {
+            color: #555555;
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .grid-container {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 25px;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .grid-container div {
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            border-radius: 4px;
+            border: 1px solid #90caf9;
+        }
+
+        /* 1. Ví dụ auto */
+        .grid-auto {
+            grid-template-columns: 120px 120px 120px;
+        }
+
+        .grid-auto .item1 {
+            grid-column-start: auto;
+            background-color: #ffeaa7;
+            border-color: #fdcb6e;
+        }
+
+        /* 2. Ví dụ span n */
+        .grid-span {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .grid-span .item1 {
+            grid-column-start: span 2;
+            background-color: #ff7675;
+            color: white;
+            border-color: #d63031;
+        }
+
+        /* 3. Ví dụ column-line */
+        .grid-line {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .grid-line .item1 {
+            grid-column-start: 2;
+            background-color: #55efc4;
+            border-color: #00b894;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ví dụ 1: auto -->
+    <h2>1. Giá trị auto</h2>
+    <p class="desc"><code>grid-column-start: auto;</code> - Vị trí của Item được sắp xếp tự nhiên theo thứ tự mặc định của Grid.</p>
+    <div class="grid-container grid-auto">
+        <div class="item1">Item 1 (auto)</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+
+    <!-- Ví dụ 2: span n -->
+    <h2>2. Giá trị span n</h2>
+    <p class="desc"><code>grid-column-start: span 2;</code> - Item 1 mở rộng kéo dài qua 2 cột.</p>
+    <div class="grid-container grid-span">
+        <div class="item1">Item 1 (span 2)</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+    </div>
+
+    <!-- Ví dụ 3: column-line -->
+    <h2>3. Giá trị column-line</h2>
+    <p class="desc"><code>grid-column-start: 2;</code> - Item 1 bắt đầu từ đường kẻ cột số 2 (để trống cột 1 đầu tiên).</p>
+    <div class="grid-container grid-line">
+        <div class="item1">Item 1 (bắt đầu từ đường kẻ 2)</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+        <div>Item 4</div>
+    </div>
+
+</body>
+</html>
