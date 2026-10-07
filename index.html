@@ -3,57 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bố cục Responsive với CSS Grid</title>
+    <title>Thực hành: CSS flex-wrap property</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="grid-layout">
-        <!-- 1. Header -->
-        <header class="header">
-            <h1>CÔNG NGHỆ WEB HIỆN ĐẠI</h1>
-            <p>Bố cục lưới Responsive với CSS Grid (grid-template-areas)</p>
-        </header>
+    <h1>Thực hành: Thuộc tính flex-wrap trong CSS Flexbox</h1>
+    <p class="subtitle">Quan sát sự khác nhau giữa các giá trị khi tổng kích thước của các Item (180px * 6 = 1080px) lớn hơn kích thước của Container (600px).</p>
 
-        <!-- 2. Navigation -->
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Khóa học</a></li>
-                <li><a href="#">CSS Grid</a></li>
-                <li><a href="#">Responsive</a></li>
-                <li><a href="#">Liên hệ</a></li>
-            </ul>
-        </nav>
+    <!-- 1. flex-wrap: wrap -->
+    <div class="demo-section">
+        <h3>1. flex-wrap: wrap</h3>
+        <p>Cho phép các Flex Items bọc xuống dòng tiếp theo khi không đủ chỗ.</p>
+        <div class="container wrap-demo">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+    </div>
 
-        <!-- 3. Sidebar -->
-        <aside class="sidebar">
-            <h3>Tin Nổi Bật</h3>
-            <ul>
-                <li><a href="#">Ưu điểm của CSS Grid</a></li>
-                <li><a href="#">Flexbox vs CSS Grid</a></li>
-                <li><a href="#">Media Queries căn bản</a></li>
-                <li><a href="#">Tối ưu hóa SEO cho Web</a></li>
-            </ul>
+    <!-- 2. flex-wrap: nowrap -->
+    <div class="demo-section">
+        <h3>2. flex-wrap: nowrap (Mặc định)</h3>
+        <p>Bắt buộc tất cả các Item nằm trên cùng 1 hàng, không cho phép xuống dòng.</p>
+        <div class="container nowrap-demo">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+    </div>
 
-            <h3>Góc Quảng Cáo</h3>
-            <div class="widget-box">
-                Đăng ký khóa học lập trình Frontend chuyên sâu ngay hôm nay để nhận ưu đãi!
-            </div>
-        </aside>
+    <!-- 3. flex-wrap: wrap-reverse -->
+    <div class="demo-section">
+        <h3>3. flex-wrap: wrap-reverse</h3>
+        <p>Cho phép xuống dòng nhưng đảo ngược chiều của trục Cross Axis (dòng sau đặt lên phía trên).</p>
+        <div class="container wrap-reverse-demo">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
+    </div>
 
-        <!-- 4. Main Content -->
-        <main class="content">
-            <h2>Xây Dựng Bố Cục Đa Thiết Bị Bằng CSS Grid</h2>
-            <p>CSS Grid Layout là hệ thống bố cục lưới 2 chiều mạnh mẽ nhất trong CSS hiện đại, cho phép thiết kế giao diện theo cả hàng (rows) và cột (columns) một cách trực quan.</p>
-            <p>Bằng cách sử dụng thuộc tính <code>grid-template-areas</code> kết hợp với Media Query, chúng ta có thể dễ dàng thay đổi trật tự sắp xếp giữa máy tính để bàn (Desktop) và điện thoại di động (Mobile) mà không cần chỉnh sửa lại mã nguồn HTML.</p>
-            <p>Trên giao diện điện thoại, các thành phần sẽ tự động xếp dọc theo chiều dài màn hình, mang lại trải nghiệm đọc nội dung liền mạch và tiện lợi nhất cho người dùng.</p>
-        </main>
-
-        <!-- 5. Footer -->
-        <footer class="footer">
-            <p>&copy; 2026 CodeGym. All Rights Reserved. Xây dựng giao diện chuẩn CSS Grid Responsive.</p>
-        </footer>
+    <!-- 4. flex-wrap: initial -->
+    <div class="demo-section">
+        <h3>4. flex-wrap: initial</h3>
+        <p>Đưa thuộc tính về giá trị mặc định của CSS (tương đương với <code>nowrap</code>).</p>
+        <div class="container initial-demo">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>
+            <div class="item">Item 5</div>
+            <div class="item">Item 6</div>
+        </div>
     </div>
 
 </body>
