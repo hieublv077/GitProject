@@ -3,36 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bố cục với display</title>
+    <title>Bố cục với Float và Overflow</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bố cục trang web với display</h1>
-    
-    <nav>
-        <a href="#">Trang chủ</a>
-        <a href="#">Giới thiệu</a>
-        <a href="#">Dịch vụ</a>
-        <a href="#">Liên hệ</a>
-    </nav>
-    
-    <section>
-        <div class="box">
-            <h3>Cột 1</h3>
-            <p>Sử dụng display: inline-block để các khối nằm cạnh nhau theo hàng ngang.</p>
+
+    <h1>Bố cục trang với float và overflow</h1>
+
+    <!-- 2 cột chia bằng float -->
+    <div class="container">
+        <div class="left-column">
+            <h3>Nội dung bên trái</h3>
+            <p>Cột bên trái chiếm 50% độ rộng và sử dụng float: left.</p>
         </div>
-        <div class="box">
-            <h3>Cột 2</h3>
-            <p>Có thể kiểm soát độ rộng (width) và khoảng cách lề (margin) linh hoạt.</p>
+        <div class="right-column">
+            <h3>Nội dung bên phải</h3>
+            <p>Cột bên phải chiếm 50% độ rộng và sử dụng float: right.</p>
         </div>
-        <div class="box">
-            <h3>Cột 3</h3>
-            <p>Kết hợp box-sizing: border-box để việc tính toán kích thước luôn chuẩn xác.</p>
-        </div>
-    </section>
-    
-    <footer>
-        <p>Bản quyền &copy; 2026 CodeGym</p>
-    </footer>
+    </div>
+
+    <!-- Khối kiểm tra overflow auto -->
+    <div class="overflow-box">
+        Đây là nội dung rất dài mà chúng ta kiểm tra overflow. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies nunc in mauris pharetra, a ultricies justo fermentum. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+    </div>
+
 </body>
 </html>

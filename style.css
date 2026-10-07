@@ -4,7 +4,6 @@
 
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     margin: 0;
     padding: 20px;
     background-color: #f7f9fa;
@@ -15,47 +14,39 @@ h1 {
     margin-bottom: 20px;
 }
 
-nav {
-    margin-bottom: 30px;
-}
-
-nav a {
-    display: inline-block;
-    margin: 0 15px;
-    padding: 8px 16px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    border-radius: 4px;
-    background-color: #e2e8f0;
-    transition: background-color 0.2s;
-}
-
-nav a:hover {
-    background-color: #3498db;
-    color: white;
-}
-
-section {
-    max-width: 1000px;
-    margin: 0 auto 30px auto;
-}
-
-.box {
-    display: inline-block;
-    vertical-align: top;
-    width: 29%;
-    padding: 30px 15px;
-    background-color: lightblue;
-    margin: 10px 1%;
+/* Khối container chứa float, dùng overflow: hidden để tự động clearfix */
+.container {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 25px;
     border-radius: 6px;
-    font-size: 16px;
-    color: #1e3a8a;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
-footer {
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-    color: #666;
+.left-column {
+    width: 50%;
+    float: left;
+    background-color: lightgray;
+    padding: 20px;
+    min-height: 120px;
+}
+
+.right-column {
+    width: 50%;
+    float: right;
+    background-color: lightgreen;
+    padding: 20px;
+    min-height: 120px;
+}
+
+/* Khối nội dung dài có thanh cuộn */
+.overflow-box {
+    width: 320px;
+    height: 110px;
+    background-color: lightcoral;
+    padding: 12px;
+    overflow: auto;
+    border: 1px solid #c0392b;
+    border-radius: 6px;
+    line-height: 1.5;
+    color: #2c3e50;
 }
