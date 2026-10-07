@@ -3,38 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Grid Layout</title>
+    <title>Bố cục Responsive với CSS Grid</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- Header -->
+    <div class="grid-layout">
+        <!-- 1. Header -->
         <header class="header">
-            HEADER - BỐ CỤC CSS GRID
+            <h1>CÔNG NGHỆ WEB HIỆN ĐẠI</h1>
+            <p>Bố cục lưới Responsive với CSS Grid (grid-template-areas)</p>
         </header>
 
-        <!-- Sidebar -->
-        <nav class="sidebar">
-            <h3>Menu Điều Hướng</h3>
+        <!-- 2. Navigation -->
+        <nav class="nav">
             <ul>
                 <li><a href="#">Trang chủ</a></li>
                 <li><a href="#">Khóa học</a></li>
-                <li><a href="#">Tài liệu tham khảo</a></li>
-                <li><a href="#">Liên hệ hỗ trợ</a></li>
+                <li><a href="#">CSS Grid</a></li>
+                <li><a href="#">Responsive</a></li>
+                <li><a href="#">Liên hệ</a></li>
             </ul>
         </nav>
 
-        <!-- Content -->
+        <!-- 3. Sidebar -->
+        <aside class="sidebar">
+            <h3>Tin Nổi Bật</h3>
+            <ul>
+                <li><a href="#">Ưu điểm của CSS Grid</a></li>
+                <li><a href="#">Flexbox vs CSS Grid</a></li>
+                <li><a href="#">Media Queries căn bản</a></li>
+                <li><a href="#">Tối ưu hóa SEO cho Web</a></li>
+            </ul>
+
+            <h3>Góc Quảng Cáo</h3>
+            <div class="widget-box">
+                Đăng ký khóa học lập trình Frontend chuyên sâu ngay hôm nay để nhận ưu đãi!
+            </div>
+        </aside>
+
+        <!-- 4. Main Content -->
         <main class="content">
-            <h2>Nội Dung Chính</h2>
-            <p>Bố cục này được xây dựng hoàn toàn bằng thuộc tính <code>grid-template-areas</code> của CSS Grid, giúp việc phân bổ vị trí các khối trở nên trực quan và dễ quản lý.</p>
-            <p>Trên màn hình máy tính để bàn (Desktop), Sidebar chiếm 1 phần (1fr) và Nội dung chính chiếm 3 phần (3fr). Khi thu nhỏ màn hình xuống thiết bị di động (<= 768px), toàn bộ bố cục tự động xếp chồng theo hàng dọc chuẩn Responsive.</p>
+            <h2>Xây Dựng Bố Cục Đa Thiết Bị Bằng CSS Grid</h2>
+            <p>CSS Grid Layout là hệ thống bố cục lưới 2 chiều mạnh mẽ nhất trong CSS hiện đại, cho phép thiết kế giao diện theo cả hàng (rows) và cột (columns) một cách trực quan.</p>
+            <p>Bằng cách sử dụng thuộc tính <code>grid-template-areas</code> kết hợp với Media Query, chúng ta có thể dễ dàng thay đổi trật tự sắp xếp giữa máy tính để bàn (Desktop) và điện thoại di động (Mobile) mà không cần chỉnh sửa lại mã nguồn HTML.</p>
+            <p>Trên giao diện điện thoại, các thành phần sẽ tự động xếp dọc theo chiều dài màn hình, mang lại trải nghiệm đọc nội dung liền mạch và tiện lợi nhất cho người dùng.</p>
         </main>
 
-        <!-- Footer -->
+        <!-- 5. Footer -->
         <footer class="footer">
-            &copy; 2026 CodeGym. All Rights Reserved. Xây dựng giao diện với CSS Grid.
+            <p>&copy; 2026 CodeGym. All Rights Reserved. Xây dựng giao diện chuẩn CSS Grid Responsive.</p>
         </footer>
     </div>
 
