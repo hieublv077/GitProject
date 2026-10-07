@@ -1,6 +1,6 @@
 ﻿* {
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
 }
 
 body {
@@ -10,43 +10,55 @@ body {
 
 h2 {
     color: #2c3e50;
+    margin-top: 20px;
     margin-bottom: 8px;
 }
 
 p.desc {
     color: #555555;
-    margin-bottom: 20px;
-    font-size: 15px;
+    margin-bottom: 16px;
+    font-size: 14px;
 }
 
-.grid-container {
+/* Ví dụ 1: Khoảng cách giữa hàng và cột bằng nhau (grid-gap: 20px) */
+.grid-container-1 {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 100px);
-    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px; /* Tương đương: row-gap 20px, column-gap 20px */
     background-color: #ffffff;
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    margin-bottom: 35px;
 }
 
-.item {
+.grid-container-1 div {
     background-color: lightblue;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
     border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border: 1px solid #90caf9;
 }
 
-/* Ô 1 chiếm 2 hàng liên tiếp (từ đường kẻ hàng 1 đến đường kẻ hàng 3) */
-.item1 {
-    grid-row: 1 / 3;
-    background-color: #ff7675;
-    color: #ffffff;
-    border-color: #d63031;
+/* Ví dụ 2: Khoảng cách hàng và cột khác nhau (grid-gap: 30px 10px) */
+.grid-container-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px 10px; /* 30px cho hàng (row), 10px cho cột (column) */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.grid-container-2 div {
+    background-color: lightgreen;
+    padding: 25px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #a5d6a7;
 }
