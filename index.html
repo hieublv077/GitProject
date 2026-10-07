@@ -3,60 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bố cục trang web với Responsive Web Design (RWD)</title>
+    <title>Responsive Image Gallery</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- 1. Header -->
-        <div class="header">
-            <h1>THIẾT KẾ WEB CHUẨN RWD</h1>
-            <p>Bố cục tự động co giãn và tối ưu hiển thị trên mọi kích thước màn hình</p>
-        </div>
+    <h2>Bộ Sưu Tập Hình Ảnh Responsive (RWD)</h2>
+    <p class="subtitle">Thay đổi kích thước cửa sổ trình duyệt để quan sát số lượng ảnh hiển thị trên mỗi dòng</p>
 
-        <!-- 2. Navigation -->
-        <div class="topnav">
-            <a href="#">Trang chủ</a>
-            <a href="#">Tin tức</a>
-            <a href="#">Khóa học</a>
-            <a href="#">Dự án</a>
-            <a href="#">Liên hệ</a>
-        </div>
-
-        <!-- 3. Nội dung chia cột (Responsive Row) -->
-        <div class="row">
-            <!-- Cột trái: Danh mục -->
-            <div class="side-left">
-                <h3>Danh Mục</h3>
-                <ul>
-                    <li><a href="#">HTML5 & Semantic</a></li>
-                    <li><a href="#">CSS3 Box Model</a></li>
-                    <li><a href="#">Flexbox & Grid</a></li>
-                    <li><a href="#">Media Queries</a></li>
-                    <li><a href="#">Mobile First</a></li>
-                </ul>
-            </div>
-
-            <!-- Cột giữa: Bài viết chính -->
-            <div class="main-content">
-                <h2>Nguyên Tắc Thiết Kế Web Responsive (RWD)</h2>
-                <div class="fake-img">Hình Ảnh Minh Họa Banner</div>
-                <p>Responsive Web Design (RWD) giúp website tự điều chỉnh theo độ phân giải của máy tính để bàn, laptop, máy tính bảng và điện thoại thông minh mà không bị vỡ bố cục hoặc xuất hiện thanh cuộn ngang khó chịu.</p>
-                <p>Sử dụng kết hợp các đơn vị linh hoạt (%, rem, vw), Flexbox và CSS Media Queries là giải pháp cốt lõi để tạo nên trải nghiệm người dùng liền mạch.</p>
-            </div>
-
-            <!-- Cột phải: Tin vắn & Widget -->
-            <div class="side-right">
-                <h3>Thông Tin Phụ</h3>
-                <p>Cập nhật xu hướng thiết kế web hiện đại năm 2026.</p>
-                <div class="fake-img" style="padding: 30px 0; margin-top: 10px;">Quảng Cáo</div>
+    <div class="gallery-container clearfix">
+        <!-- Ảnh 1 -->
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80">
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Phong cảnh núi non">
+                </a>
+                <div class="desc">Thiên nhiên núi rừng hùng vĩ</div>
             </div>
         </div>
 
-        <!-- 4. Footer -->
-        <div class="footer">
-            <p>&copy; 2026 Bản quyền thuộc về CodeGym | Thiết kế Bố cục RWD</p>
+        <!-- Ảnh 2 -->
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Bờ biển nhiệt đới">
+                </a>
+                <div class="desc">Bãi biển hoàng hôn nhiệt đới</div>
+            </div>
+        </div>
+
+        <!-- Ảnh 3 -->
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80">
+                    <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=600&q=80" alt="Rừng cây mùa thu">
+                </a>
+                <div class="desc">Rừng cây lá vàng mùa thu</div>
+            </div>
+        </div>
+
+        <!-- Ảnh 4 -->
+        <div class="responsive">
+            <div class="gallery">
+                <a target="_blank" href="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80">
+                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=600&q=80" alt="Sương mù ban mai">
+                </a>
+                <div class="desc">Sương mù buổi sáng sớm</div>
+            </div>
         </div>
     </div>
 
