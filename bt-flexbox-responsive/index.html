@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bố cục Responsive với CSS Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="page-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>WEBSITE CHUẨN RESPONSIVE</h1>
+            <p>Bố cục đa thiết bị xây dựng hoàn toàn bằng CSS Flexbox</p>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Khóa học</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Body (Sidebar + Content) -->
+        <div class="body-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h3>Danh Mục Bài Viết</h3>
+                <ul>
+                    <li><a href="#">Flexbox Container & Item</a></li>
+                    <li><a href="#">Trục Main Axis & Cross Axis</a></li>
+                    <li><a href="#">Thuộc tính Flex Direction</a></li>
+                    <li><a href="#">Bố cục linh hoạt với Flex Grow</a></li>
+                </ul>
+
+                <h3>Quảng Cáo</h3>
+                <div class="ads-box">
+                    Học lập trình Web chuẩn thực chiến cùng CodeGym.
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <h2>Bố Cục Trang Web Linh Hoạt Với Flexbox</h2>
+                <p>CSS Flexbox cung cấp khả năng sắp xếp và căn chỉnh kích thước các phần tử con theo một chiều cực kỳ tối ưu, giúp giải quyết các vấn đề dàn trang phức tạp mà không cần can thiệp quá nhiều vào các thuộc tính float hay position.</p>
+                <p>Trên màn hình máy tính để bàn (Desktop), khu vực nội dung và thanh điều hướng phụ được đặt cạnh nhau nhờ vào trục ngang của Flexbox (<code>flex-direction: row</code>). Phần nội dung chính được cấp tỷ lệ <code>flex: 3</code> và Sidebar chiếm <code>flex: 1</code> để phân bổ không gian hợp lý.</p>
+                <p>Khi hiển thị trên điện thoại thông minh (màn hình nhỏ hơn 768px), Media Query sẽ điều chỉnh <code>flex-direction: column</code> để các phần tử xếp chồng lên nhau gọn gàng theo chiều dọc, mang lại trải nghiệm xem thuận tiện nhất cho người dùng di động.</p>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 CodeGym. All Rights Reserved. Xây dựng giao diện bằng CSS Flexbox.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
