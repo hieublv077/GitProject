@@ -1,0 +1,25 @@
+﻿@use "../abstracts/variables" as vars;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f7f9fa;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: vars.$font-large;
+  color: vars.$text-color;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: vars.$font-medium;
+  color: vars.$text-color;
+  margin-bottom: 15px;
+}

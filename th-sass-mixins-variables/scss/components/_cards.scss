@@ -1,0 +1,14 @@
+﻿@use "../abstracts/mixins" as mix;
+
+.card {
+  @include mix.box-style;
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #e1e8ed;
+
+  p {
+    line-height: 1.6;
+    color: #555555;
+    margin-bottom: 20px;
+  }
+}
