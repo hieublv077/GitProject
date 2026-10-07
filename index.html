@@ -3,64 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành: Tạo Bố Cục Cơ Bản</title>
+    <title>Bố cục với display</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div id="main">
-        <!-- 1. Head -->
-        <div id="head">
-            <h1>HỆ THỐNG ĐÀO TẠO LẬP TRÌNH - CODEGYM</h1>
+    <h1>Bố cục trang web với display</h1>
+    
+    <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Dịch vụ</a>
+        <a href="#">Liên hệ</a>
+    </nav>
+    
+    <section>
+        <div class="box">
+            <h3>Cột 1</h3>
+            <p>Sử dụng display: inline-block để các khối nằm cạnh nhau theo hàng ngang.</p>
         </div>
-
-        <!-- 2. Head-link -->
-        <div id="head-link">
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Học viên</a></li>
-                <li><a href="#">Khóa học</a></li>
-                <li><a href="#">Tin tức</a></li>
-                <li><a href="#">Liên hệ</a></li>
-            </ul>
+        <div class="box">
+            <h3>Cột 2</h3>
+            <p>Có thể kiểm soát độ rộng (width) và khoảng cách lề (margin) linh hoạt.</p>
         </div>
-
-        <!-- Khối bao quanh 3 cột float -->
-        <div class="body-content">
-            <!-- 3. Left -->
-            <div id="left">
-                <h3>Liên Kết Trái</h3>
-                <ul>
-                    <li><a href="#">HTML cơ bản</a></li>
-                    <li><a href="#">CSS Box Model</a></li>
-                    <li><a href="#">Định vị Position</a></li>
-                    <li><a href="#">Layout với Float</a></li>
-                    <li><a href="#">Flexbox hiện đại</a></li>
-                </ul>
-            </div>
-
-            <!-- 4. Content -->
-            <div id="content">
-                <h2>Nội Dung Chính: Kiến Trúc Phân Vùng Trang Web</h2>
-                <p>Bố cục trang web cơ bản được xây dựng dựa trên sự phân tách rõ ràng giữa các thẻ khối div kết hợp với kỹ thuật float và clear trong CSS.</p>
-                <p>Phần content này là khu vực trung tâm, nơi người dùng tiếp nhận tin tức, bài viết chuyên sâu và các thông điệp giá trị nhất của trang web.</p>
-                <p>Nhờ áp dụng nguyên lý Box Model và căn giữa khung chứa #main, trang web hiển thị hài hòa, cân đối và khoa học trên màn hình máy tính.</p>
-            </div>
-
-            <!-- 5. Right -->
-            <div id="right">
-                <h3>Thông Tin Phụ</h3>
-                <p><b>Lịch biểu:</b> Thứ 2 - Thứ 6</p>
-                <p><b>Giờ học:</b> 08:30 - 17:30</p>
-                <p><b>Thông báo:</b> Chuẩn bị nộp bài tập module CSS và Git trước hạn chót.</p>
-            </div>
+        <div class="box">
+            <h3>Cột 3</h3>
+            <p>Kết hợp box-sizing: border-box để việc tính toán kích thước luôn chuẩn xác.</p>
         </div>
-
-        <!-- 6. Footer -->
-        <div id="footer">
-            &copy; 2026 CodeGym. All Rights Reserved. Hệ thống đào tạo lập trình hiện đại.
-        </div>
-    </div>
-
+    </section>
+    
+    <footer>
+        <p>Bản quyền &copy; 2026 CodeGym</p>
+    </footer>
 </body>
 </html>
