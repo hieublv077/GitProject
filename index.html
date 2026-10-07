@@ -3,29 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bố cục với Float và Overflow</title>
+    <title>Landing Page Responsive</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Bố cục trang với float và overflow</h1>
+    <header class="header">
+        <div class="logo">MyBrand</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#services">Dịch vụ</a></li>
+                <li><a href="#testimonials">Đánh giá</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- 2 cột chia bằng float -->
-    <div class="container">
-        <div class="left-column">
-            <h3>Nội dung bên trái</h3>
-            <p>Cột bên trái chiếm 50% độ rộng và sử dụng float: left.</p>
-        </div>
-        <div class="right-column">
-            <h3>Nội dung bên phải</h3>
-            <p>Cột bên phải chiếm 50% độ rộng và sử dụng float: right.</p>
-        </div>
-    </div>
+    <section class="hero">
+        <h1>Chào mừng đến với MyBrand</h1>
+        <p>Giải pháp số 1 cho doanh nghiệp của bạn</p>
+        <a href="#services" class="btn">Tìm hiểu thêm</a>
+    </section>
 
-    <!-- Khối kiểm tra overflow auto -->
-    <div class="overflow-box">
-        Đây là nội dung rất dài mà chúng ta kiểm tra overflow. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultricies nunc in mauris pharetra, a ultricies justo fermentum. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-    </div>
+    <section id="services" class="services">
+        <h2>Dịch vụ của chúng tôi</h2>
+        <div class="service-container">
+            <div class="service">Thiết kế web</div>
+            <div class="service">Phát triển phần mềm</div>
+            <div class="service">Marketing số</div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>Khách hàng nói gì?</h2>
+        <div class="testimonial">"Dịch vụ tuyệt vời!" - Khách hàng A</div>
+        <div class="testimonial">"Tôi rất hài lòng với MyBrand." - Khách hàng B</div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 MyBrand. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
