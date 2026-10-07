@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực hành: Tạo Menu Dọc (Vertical Dropdown Menu)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 40px;
+            background-color: #f4f6f8;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        /* Vùng chứa menu */
+        #menu {
+            width: 140px;
+        }
+
+        /* Định dạng các danh sách không có thứ tự */
+        #menu ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Định dạng các mục li của menu */
+        #menu li {
+            list-style: none;
+            position: relative; /* Làm mốc tọa độ cho submenu */
+            width: 140px;
+            height: 35px;
+            line-height: 35px;
+            padding: 0 15px;
+            background-color: #222222;
+            cursor: pointer;
+            border-bottom: 1px solid #333333;
+            transition: background-color 0.2s ease;
+        }
+
+        /* Định dạng liên kết bên trong menu */
+        #menu li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 14px;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Đổi màu nền khi rê chuột qua mục chọn */
+        #menu li:hover {
+            background-color: #007acc;
+        }
+
+        /* Định dạng menu con (submenu) */
+        #menu li ul {
+            position: absolute;
+            top: 0;
+            left: 140px; /* Xuất hiện ngay sát mép phải của menu cha */
+            visibility: hidden; /* Mặc định ẩn menu con */
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        /* Hiển thị menu con khi rê chuột vào li cha tương ứng */
+        #menu li:hover > ul {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Thực hành: Menu Dọc Đa Cấp</h2>
+
+    <div id="menu">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li>
+                <a href="#">Khóa học &#9656;</a>
+                <ul>
+                    <li><a href="#">HTML & CSS</a></li>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">ReactJS</a></li>
+                    <li><a href="#">NodeJS</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Dịch vụ &#9656;</a>
+                <ul>
+                    <li><a href="#">Thiết kế Web</a></li>
+                    <li><a href="#">Lập trình App</a></li>
+                    <li><a href="#">SEO & Marketing</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tin tức</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>
