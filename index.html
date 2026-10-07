@@ -3,47 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Responsive</title>
+    <title>Bố cục trang web với Responsive Web Design (RWD)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-        <div class="logo">MyBrand</div>
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#services">Dịch vụ</a></li>
-                <li><a href="#testimonials">Đánh giá</a></li>
-                <li><a href="#">Liên hệ</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <h1>Chào mừng đến với MyBrand</h1>
-        <p>Giải pháp số 1 cho doanh nghiệp của bạn</p>
-        <a href="#services" class="btn">Tìm hiểu thêm</a>
-    </section>
-
-    <section id="services" class="services">
-        <h2>Dịch vụ của chúng tôi</h2>
-        <div class="service-container">
-            <div class="service">Thiết kế web</div>
-            <div class="service">Phát triển phần mềm</div>
-            <div class="service">Marketing số</div>
+    <div class="container">
+        <!-- 1. Header -->
+        <div class="header">
+            <h1>THIẾT KẾ WEB CHUẨN RWD</h1>
+            <p>Bố cục tự động co giãn và tối ưu hiển thị trên mọi kích thước màn hình</p>
         </div>
-    </section>
 
-    <section id="testimonials" class="testimonials">
-        <h2>Khách hàng nói gì?</h2>
-        <div class="testimonial">"Dịch vụ tuyệt vời!" - Khách hàng A</div>
-        <div class="testimonial">"Tôi rất hài lòng với MyBrand." - Khách hàng B</div>
-    </section>
+        <!-- 2. Navigation -->
+        <div class="topnav">
+            <a href="#">Trang chủ</a>
+            <a href="#">Tin tức</a>
+            <a href="#">Khóa học</a>
+            <a href="#">Dự án</a>
+            <a href="#">Liên hệ</a>
+        </div>
 
-    <footer class="footer">
-        <p>&copy; 2026 MyBrand. All rights reserved.</p>
-    </footer>
+        <!-- 3. Nội dung chia cột (Responsive Row) -->
+        <div class="row">
+            <!-- Cột trái: Danh mục -->
+            <div class="side-left">
+                <h3>Danh Mục</h3>
+                <ul>
+                    <li><a href="#">HTML5 & Semantic</a></li>
+                    <li><a href="#">CSS3 Box Model</a></li>
+                    <li><a href="#">Flexbox & Grid</a></li>
+                    <li><a href="#">Media Queries</a></li>
+                    <li><a href="#">Mobile First</a></li>
+                </ul>
+            </div>
+
+            <!-- Cột giữa: Bài viết chính -->
+            <div class="main-content">
+                <h2>Nguyên Tắc Thiết Kế Web Responsive (RWD)</h2>
+                <div class="fake-img">Hình Ảnh Minh Họa Banner</div>
+                <p>Responsive Web Design (RWD) giúp website tự điều chỉnh theo độ phân giải của máy tính để bàn, laptop, máy tính bảng và điện thoại thông minh mà không bị vỡ bố cục hoặc xuất hiện thanh cuộn ngang khó chịu.</p>
+                <p>Sử dụng kết hợp các đơn vị linh hoạt (%, rem, vw), Flexbox và CSS Media Queries là giải pháp cốt lõi để tạo nên trải nghiệm người dùng liền mạch.</p>
+            </div>
+
+            <!-- Cột phải: Tin vắn & Widget -->
+            <div class="side-right">
+                <h3>Thông Tin Phụ</h3>
+                <p>Cập nhật xu hướng thiết kế web hiện đại năm 2026.</p>
+                <div class="fake-img" style="padding: 30px 0; margin-top: 10px;">Quảng Cáo</div>
+            </div>
+        </div>
+
+        <!-- 4. Footer -->
+        <div class="footer">
+            <p>&copy; 2026 Bản quyền thuộc về CodeGym | Thiết kế Bố cục RWD</p>
+        </div>
+    </div>
 
 </body>
 </html>
