@@ -1,41 +1,56 @@
-﻿body {
+﻿/* Định dạng chung */
+body {
     font-family: Arial, sans-serif;
-    background-color: #f7f9fa;
-    padding: 20px;
     margin: 0;
+    padding: 0;
 }
 
-h1 {
-    color: #2c3e50;
-    margin-bottom: 20px;
+/* Thanh điều hướng Sticky */
+.sticky-menu {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Quy tắc chung cho tất cả các thẻ .card */
-.card {
-    width: 280px;
-    height: 150px;
-    padding: 20px;
-    border: 5px solid #3498db;
-    margin: 20px;
-    color: #ffffff;
-    font-weight: 500;
+.sticky-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
-/* Thẻ 1: content-box (Kích thước thực tế sẽ lớn hơn 280x150 do cộng dồn padding và border) */
-.card:nth-child(1) {
-    box-sizing: content-box;
-    background-color: #2ecc71;
+.sticky-menu ul li {
+    margin: 0 15px;
 }
 
-/* Thẻ 2: border-box (Kích thước bao quát trọn đúng 280x150) */
-.card:nth-child(2) {
-    box-sizing: border-box;
-    background-color: #f1c40f;
-    color: #333333;
+.sticky-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 16px;
+    display: block;
+    transition: background-color 0.2s ease;
 }
 
-/* Thẻ 3: border-box */
-.card:nth-child(3) {
-    box-sizing: border-box;
-    background-color: #e74c3c;
+.sticky-menu ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
 }
+
+/* Nội dung trang web */
+section {
+    padding: 100px 20px;
+    min-height: 80vh;
+}
+
+#home { background-color: #f4f4f4; }
+#about { background-color: #e2e8f0; }
+#services { background-color: #cbd5e1; }
+#contact { background-color: #94a3b8; }
